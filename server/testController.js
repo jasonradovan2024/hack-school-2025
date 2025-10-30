@@ -11,58 +11,58 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB: ", err));
 
-// Uncomment this code block to test getPolls
+//Uncomment this code block to test getPolls
 
-// const { getPolls } = require("./controllers/pollController");
+const { getPolls } = require("./controllers/pollController");
 
-// (async () => {
-//   console.log("Running getPolls()...");
-//   const result = await getPolls();
-//   console.log(result);
-// })();
+(async () => {
+  console.log("Running getPolls()...");
+  const result = await getPolls();
+  console.log(result);
+})();
 
-// Uncomment this code block to test getPoll
+//Uncomment this code block to test getPoll
 
-// const { getPoll } = require("./controllers/pollController");
+const { getPoll } = require("./controllers/pollController");
 
-// (async () => {
-//   console.log("Running getPoll()...");
-//   const result = await getPoll("67144a73c527df736fbe5eac");
-//   console.log(result);
-// })();
+(async () => {
+  console.log("Running getPoll()...");
+  const result = await getPoll("67144a73c527df736fbe5eac");
+  console.log(result);
+})();
 
-// Uncomment this code block to test postPoll
+//Uncomment this code block to test postPoll
 
-// const { postPoll } = require("./controllers/pollController");
+const { postPoll } = require("./controllers/pollController");
 
-// (async () => {
-//   console.log("Running postPoll()...");
-//   const result = await postPoll({
-//     ownerId: "Tyler",
-//     title: "Tyler's poll",
-//     description: "Tyler's poll description",
-//     options: [
-//       {
-//         option: "Poll option #1",
-//         count: 0,
-//       },
-//     ],
-//   });
-//   console.log(result);
-// })();
+(async () => {
+  console.log("Running postPoll()...");
+  const result = await postPoll({
+    ownerId: "Tyler",
+    title: "Tyler's poll",
+    description: "Tyler's poll description",
+    options: [
+      {
+        option: "Poll option #1",
+        count: 0,
+      },
+    ],
+  });
+  console.log(result);
+})();
 
-// Uncomment this code block to test postVote
+//Uncomment this code block to test postVote
 
-// const { postVote } = require("./controllers/pollController");
+const { postVote } = require("./controllers/pollController");
 
-// (async () => {
-//   console.log("Running postVote()...");
-//   const result = await postVote(
-//     {
-//       pollId: "67144a73c527df736fbe5eac",
-//       optionId: "67144a73c527df736fbe5ead",
-//     },
-//     {}
-//   );
-//   console.log(result);
-// })();
+(async () => {
+  console.log("Running postVote()...");
+  const result = await postVote(
+    {
+      pollId: "67144a73c527df736fbe5eac",
+      optionId: "67144a73c527df736fbe5ead",
+    },
+    {}
+  );
+  console.log(result);
+})();
